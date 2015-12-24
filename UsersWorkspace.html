@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Workspase</title>
+	<link rel="stylesheet" type="text/css" href="styles/UsersWorkspaseStyle.css">
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+  	<script src="bower_components/angular-animate/angular-animate.js"></script>
+  	<script src="bower_components/angular-route/angular-route.js"></script>
+  	<script src="bower_components/angular-resource/angular-resource.js"></script>
+  
+	<script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script>
+	  
+	  
+	<script src="scripts/UsersWorkspase-controller.js"></script>
+	<script src="scripts/UsersWorkspase.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="logo">interview<span id="span-logo">.code</span></div>
+		<div class="send-request"></div>
+	</div>
+	
+	<div id="fullTask">
+		<div id="Back"><img src="images/Back.png" alt=""  onclick="Back()"></div>
+		<div id="titleTask">{{1+3}}</div>
+
+		<div id="Task"><p></p></div>
+		<div id="ListTasks">
+		<table>
+			<tr  onclick="SelectTask(1)">
+				<td class="width-td"><div class="taskButton">1</div></td>  <!--onclick="SelectTask(3)"-->
+				<td>Task</td>
+			</tr>
+			<tr  onclick="SelectTask(2)">
+				<td><div class="taskButton">2</div></td>
+				<td>Task</td>
+			</tr>
+			<tr onclick="SelectTask(3)">
+				<td><div class="taskButton">3</div></td>
+				<td>Task</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	
+
+	<div id="menuBar">
+		<div class="menuBox">
+			<img class="Icons" id="code-editor" src="images/code-editor.png" alt="" title="Show program editor" onclick="ShowPr()">
+			<img class="Icons" id="test-editor" src="images/test-editor.png" title="Show test editor" onclick="ShowTest()">
+			<img class="Icons" id="test-code-editor" src="images/test-code-editor.png" alt="" title="Show all editors" onclick="ShowAll()">
+			<img class="Icons" id="compiled" src="images/compiled.png" alt="" title="Show debug message" onclick="ShowLogMessage()">
+
+		</div>
+		<div  class="menuBox">
+				<img class="Icons" id="at-server" src="images/at-server.png" alt="" title="Send programs at server">
+		</div>
+	</div>
+	
+	<div id="baseArea">
+		<div id="programEditor">
+			<div id="files" > ProgramEditor</div>
+			<div class="editor" ui-ace></div>
+		</div>
+		<div id="testEditor">
+			<div id="files">TestEditor</div>
+			<div class="editor" ui-ace></div>
+		</div>
+		<div id="logMess"></div>
+		
+	</div>
+</body>
+</html>
